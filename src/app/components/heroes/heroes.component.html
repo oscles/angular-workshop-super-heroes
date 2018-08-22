@@ -1,0 +1,7 @@
+<div class="container my-5">
+  <h1 class="text-center">Héroes <small>Marvel & DC</small></h1>
+
+  <div class="card-columns animated fadeIn">
+    <app-heroe-tarjeta [heroe]="heroeIter" *ngFor="let heroeIter of heroes; let id=index"></app-heroe-tarjeta>
+  </div>
+</div>

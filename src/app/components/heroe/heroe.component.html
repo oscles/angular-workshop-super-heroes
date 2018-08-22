@@ -1,0 +1,22 @@
+<div class="container my-5">
+  <h1 class="text-center">Héroes <small>Marvel & DC</small></h1>
+
+  <div class="card-columns animated fadeIn my-5">
+    <div class="card">
+      <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title text-center"><strong>{{ heroe.nombre }}
+          <small class="text-muted">({{ heroe.aparicion | date:'y' }})</small></strong>
+      </h5>
+
+      <p class="card-text text-justify">{{ heroe.bio }}</p>
+      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+      <p class="card-text">
+        <img class="logo-casa" *ngIf="heroe.casa == 'Marvel'" src="assets/img/marvel.png" alt="heroe.casa">
+        <img class="logo-casa" *ngIf="heroe.casa == 'DC'" src="assets/img/dc.png" alt="heroe.casa">
+      </p>
+    </div>
+  </div>
+</div>
